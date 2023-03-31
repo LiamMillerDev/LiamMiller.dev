@@ -1,0 +1,159 @@
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+}
+
+/* Basic styling for the navigation bar */
+.navbar {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #333;
+}
+
+.logo img {
+  width: 100px;
+}
+
+nav {
+  display: flex;
+  flex-grow: 1;
+}
+
+.page-links-nav {
+  display: flex;
+  flex-grow: 1;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  position: relative;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.nav-links li {
+  margin-left: 1.5rem;
+}
+
+.nav-links a,
+.social-links a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.social-links a:hover {
+  color: #ccc;
+}
+
+.social-links {
+  display: flex;
+  list-style: none;
+}
+
+.social-links a {
+  margin-left: 1rem;
+}
+
+.social-links img {
+  width: 24px;
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 10;
+}
+.hamburger span {
+  display: block;
+  height: 3px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+.nav-links.active {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 250px; /* Adjust the width as desired */
+  background-color: #333;
+  padding: 2rem 1rem;
+  overflow-y: auto;
+  padding-top: 5rem; /* Add padding at the top to make space for the hamburger menu */
+}
+
+.nav-links.active li {
+  margin-top: 1rem;
+}
+
+.nav-links.active li:first-child {
+  margin-top: 0;
+}
+
+.nav-links.active .social-links {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+}
+
+.close-menu {
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .nav-links {
+    display: flex;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+.nav-links.active ~ .open-menu span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-links.active ~ .open-menu span:nth-child(1) {
+  transform: rotate(45deg) translateY(6px);
+}
+
+.nav-links.active ~ .open-menu span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-6px);
+}
+.nav-links.active .open-menu {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+}
