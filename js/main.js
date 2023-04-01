@@ -8,6 +8,12 @@ document.addEventListener("DOMContentLoaded", function () {
   function toggleMenu() {
     navLinks.classList.toggle("active");
     socialLinks.classList.toggle("active");
+
+    if (navLinks.classList.contains("active")) {
+      navLinks.appendChild(socialLinks);
+    } else {
+      document.querySelector(".navbar").appendChild(socialLinks);
+    }
   }
 
   // Attach event listeners
@@ -19,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (window.innerWidth >= 769) {
       navLinks.classList.remove("active");
       socialLinks.classList.remove("active");
+      document.querySelector(".navbar").appendChild(socialLinks);
     }
   }
 });
