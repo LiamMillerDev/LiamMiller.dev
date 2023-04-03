@@ -16,7 +16,10 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #333;
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
 }
 
 /* Logo */
@@ -48,7 +51,7 @@ nav {
 }
 
 .nav-links a {
-  color: #fff;
+  color: #32cd32;
   text-decoration: none;
   transition: color 0.3s ease;
   position: relative;
@@ -63,14 +66,14 @@ nav {
   left: 50%;
   width: 0;
   height: 2px;
-  background-color: #ccc;
+  background-color: #228b22;
   transition: all 0.4s ease;
   transform: translateX(-50%);
   border-radius: 1px;
 }
 
 .nav-links a:hover {
-  color: #ccc;
+  color: #228b22;
 }
 .nav-links a:hover::before {
   width: 100%;
@@ -107,12 +110,13 @@ nav {
   height: 20px;
   cursor: pointer;
   z-index: 10;
+  z-index: 1000;
 }
 
 .hamburger span {
   display: block;
   height: 3px;
-  background-color: #fff;
+  background-color: #32cd32;
   transition: all 0.3s ease;
 }
 
@@ -139,6 +143,7 @@ nav {
     padding: 2rem 1rem;
     overflow-y: auto;
     padding-top: 5rem;
+    z-index: 1000;
   }
 
   .nav-links.active li {
@@ -176,4 +181,85 @@ nav {
   .hamburger {
     display: none;
   }
+}
+
+/* Parallax styles */
+html,
+body {
+  background-color: #fedcc8;
+  height: 100%;
+  overflow: hidden;
+}
+
+.parallax {
+  perspective: 100px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.parallax__layer img {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.parallax__layer__0 img {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.parallax__layer__1 {
+  transform: translateZ(-100px) scale(2);
+}
+
+.parallax__layer__2 {
+  transform: translateZ(-75px) scale(1.75);
+}
+
+.parallax__layer__3 {
+  transform: translateZ(-50px) scale(1.5);
+}
+
+.parallax__layer__4 {
+  transform: translateZ(-25px) scale(1.25);
+}
+
+.parallax__layer__5 {
+  transform: translateZ(0px) scale(1);
+}
+
+.parallax__cover {
+  background: #081404;
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 2000px;
+  z-index: 2;
+}
+/* Hide scrollbar */
+.parallax::-webkit-scrollbar {
+  display: none;
 }
