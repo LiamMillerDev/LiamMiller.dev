@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parallax Effect</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        background-color: #fedcc8;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      .parallax {
+        perspective: 100px;
+        height: 100vh;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      .parallax__layer {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+
+      .parallax__layer img {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .parallax__layer__0 img {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
+
+      .parallax__layer__1 {
+        transform: translateZ(-100px) scale(2);
+      }
+
+      .parallax__layer__2 {
+        transform: translateZ(-75px) scale(1.75);
+      }
+
+      .parallax__layer__3 {
+        transform: translateZ(-50px) scale(1.5);
+      }
+
+      .parallax__layer__4 {
+        transform: translateZ(-25px) scale(1.25);
+      }
+
+      .parallax__layer__5 {
+        transform: translateZ(0px) scale(1);
+      }
+
+      .parallax__cover {
+        background: #081404;
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        height: 2000px;
+        z-index: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parallax">
+      <div class="parallax__layer parallax__layer__0">
+        <img src="/images/layer1.png" />
+      </div>
+      <div class="parallax__layer parallax__layer__1">
+        <img src="/images/layer2.png" />
+      </div>
+      <div class="parallax__layer parallax__layer__2">
+        <img src="/images/layer3.png" />
+      </div>
+      <div class="parallax__layer parallax__layer__3">
+        <img src="/images/layer4.png" />
+      </div>
+      <div class="parallax__layer parallax__layer__4">
+        <img src="/images/layer5.png" />
+      </div>
+      <div class="parallax__layer parallax__layer__5">
+        <img src="/images/layer6.png" />
+        <div class="parallax__cover"></div>
+      </div>
+    </div>
+  </body>
+</html>
