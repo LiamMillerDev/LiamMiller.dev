@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Toggle navigation menu
   function toggleMenu() {
+    hamburger.classList.toggle("active");
     if (navLinks.classList.contains("active")) {
       navLinks.classList.remove("show");
       setTimeout(() => {
@@ -26,13 +27,14 @@ document.addEventListener("DOMContentLoaded", function () {
   hamburger.addEventListener("click", toggleMenu);
   window.addEventListener("resize", closeMenuOnResize);
 
-  // Close navigation menu on window resize
+  // Close navigation menu and reset hamburger icon on window resize
   function closeMenuOnResize() {
     if (window.innerWidth >= 769) {
       navLinks.classList.remove("active");
       navLinks.classList.remove("show");
       socialLinks.classList.remove("active");
       document.querySelector(".navbar").appendChild(socialLinks);
+      hamburger.classList.remove("active"); // Reset hamburger icon
     }
   }
 });
@@ -64,3 +66,18 @@ window.onload = function () {
     loadingOverlay.style.transform = "translateY(-100%)";
   }, 1000);
 };
+
+function updateHamburger() {
+  if (window.innerWidth <= 768) {
+    if (navLinks.classList.contains("show")) {
+      hamburger.classList.add("active");
+    } else {
+      hamburger.classList.remove("active");
+    }
+  } else {
+    hamburger.classList.remove("active");
+    navLinks.classList.remove("show");
+  }
+}
+
+window.addEventListener("resize", updateHamburger);
