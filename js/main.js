@@ -1,7 +1,9 @@
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+
 document.addEventListener("DOMContentLoaded", function () {
   // Get DOM elements
-  const hamburger = document.querySelector(".hamburger");
-  const navLinks = document.querySelector(".nav-links");
+
   const socialLinks = document.querySelector(".social-links");
 
   // Toggle navigation menu
