@@ -205,6 +205,13 @@ nav {
   .social-links.active li:first-child {
     margin-left: 0;
   }
+  .parallax__layer img:nth-child(2) {
+    display: none;
+  }
+  .parallax__layer img {
+    width: 100%;
+    min-width: 100%;
+  }
 }
 @media (min-width: 769px) {
   .nav-links {
@@ -212,6 +219,9 @@ nav {
   }
   .hamburger {
     display: none;
+  }
+  .parallax__layer img:nth-child(2) {
+    display: block;
   }
 }
 .parallax__cover,
