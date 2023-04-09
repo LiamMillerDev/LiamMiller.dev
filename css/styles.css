@@ -253,7 +253,7 @@ nav {
 
 .parallax__layer img {
   position: absolute;
-  bottom: 0;
+  bottom: calc(100% - 100vh);
   height: auto;
   width: 50%;
   object-fit: contain;
