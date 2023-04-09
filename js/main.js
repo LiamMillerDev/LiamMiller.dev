@@ -50,7 +50,7 @@ function toggleNavbarBackground() {
   let scrollPosition = parallax.scrollTop;
   let opacity = Math.min(scrollPosition / viewportHeight, 1);
 
-  navbar.style.backgroundColor = `rgba(233, 192, 217, ${opacity})`;
+  navbar.style.backgroundColor = `rgba(255,255,255, ${opacity})`;
 }
 
 // Add event listener for scroll events
