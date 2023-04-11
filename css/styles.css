@@ -68,6 +68,12 @@ main {
   object-fit: cover;
 }
 
+.top-third {
+  position: absolute;
+  top: 33.33%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .content {
   position: absolute;
   width: 100%;
@@ -79,7 +85,7 @@ main {
 }
 
 .details {
-  padding: 40px;
+  padding: 20px;
   text-align: center;
   width: 100%;
   bottom: 20px;
