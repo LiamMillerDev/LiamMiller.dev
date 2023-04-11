@@ -43,7 +43,7 @@ main {
   position: relative;
   width: 350px;
   height: 190px;
-  background: #fff;
+  background: #c4dce9;
   border-radius: 20px;
   box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
 }
@@ -94,7 +94,7 @@ main {
 .details h2 {
   font-size: 1.25em;
   font-weight: 600;
-  color: #555;
+  color: black;
   line-height: 1.2em;
 }
 
