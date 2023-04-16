@@ -26,23 +26,14 @@
       media="print"
       onload="this.media='all'"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css"
+    />
 
     <title>Liam Miller - Front-end Developer</title>
   </head>
   <body>
-    <!-- Loading Overlay -->
-    <div id="loading-overlay" aria-busy="true" aria-label="Loading">
-      <img
-        src="images/logo.webp"
-        alt="Logo"
-        id="loading-logo"
-        loading="lazy"
-        width="150"
-        height="150"
-      />
-      <div class="spinner"></div>
-    </div>
-
     <!-- Header and Navigation -->
     <header class="navbar">
       <div class="logo">
@@ -109,7 +100,7 @@
 
     <!-- Main content -->
     <main>
-      <div class="card top-third">
+      <div class="card top-third" data-aos="fade-down">
         <div class="imgBx">
           <img src="images/avatar.svg" alt="Avatar" />
         </div>
@@ -123,23 +114,23 @@
 
     <!-- Parallax Background -->
     <div class="parallax" aria-hidden="true">
-      <div class="parallax__layer parallax__layer__1">
+      <div class="parallax__layer parallax__layer__1" data-rellax-speed="0">
         <img class="parallax__image" src="images/layer1.webp" alt="" />
         <img class="parallax__image" src="images/layer1.webp" alt="" />
       </div>
-      <div class="parallax__layer parallax__layer__2">
+      <div class="parallax__layer parallax__layer__2" data-rellax-speed="-1">
         <img class="parallax__image" src="images/layer2.webp" alt="" />
         <img class="parallax__image" src="images/layer2.webp" alt="" />
       </div>
-      <div class="parallax__layer parallax__layer__3">
+      <div class="parallax__layer parallax__layer__3" data-rellax-speed="-2">
         <img class="parallax__image" src="images/layer3.webp" alt="" />
         <img class="parallax__image" src="images/layer3.webp" alt="" />
       </div>
-      <div class="parallax__layer parallax__layer__4">
+      <div class="parallax__layer parallax__layer__4" data-rellax-speed="-3">
         <img class="parallax__image" src="images/layer4.webp" alt="" />
         <img class="parallax__image" src="images/layer4.webp" alt="" />
       </div>
-      <div class="parallax__layer parallax__layer__5">
+      <div class="parallax__layer parallax__layer__5" data-rellax-speed="-4">
         <img class="parallax__image" src="images/layer5.webp" alt="" />
         <img class="parallax__image" src="images/layer5.webp" alt="" />
         <div class="parallax__cover"></div>
@@ -147,5 +138,7 @@
     </div>
 
     <script src="js/main.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
   </body>
 </html>
