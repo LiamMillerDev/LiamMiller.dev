@@ -101,7 +101,7 @@ main {
 .details h2 span {
   font-size: 0.75em;
   font-weight: 500;
-  opacity: 0.5;
+  opacity: 0.9;
 }
 .navbar {
   justify-content: space-between;
