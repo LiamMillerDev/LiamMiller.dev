@@ -25,12 +25,12 @@
       rel="stylesheet"
     />
 
-    <title>Liam Miller | Front-end Developer</title>
+    <title>Liam Miller - Front-end Developer</title>
   </head>
   <body>
     <!-- Loading Overlay -->
     <div id="loading-overlay" aria-busy="true" aria-label="Loading">
-      <img src="images/logo.png" alt="Logo" id="loading-logo" />
+      <img src="images/logo.png" alt="Logo" id="loading-logo" loading="lazy" />
       <div class="spinner"></div>
     </div>
 
@@ -43,10 +43,10 @@
           rel="noopener noreferrer"
           aria-label="Liam Miller's Website"
         >
-          <img src="images/logo.png" alt="Logo" />
+          <img src="images/logo.png" alt="Logo" loading="lazy" />
         </a>
       </div>
-      <nav>
+      <nav aria-labelledby="main-navigation">
         <div class="menu-container">
           <ul class="nav-links" role="menu">
             <li role="none"><a href="#about" role="menuitem">About</a></li>
@@ -59,9 +59,9 @@
                 href="https://github.com/LiamMillerDev"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="GitHub Profile"
+                aria-label="Visit Liam Miller's GitHub Profile"
               >
-                <img src="images/github.png" alt="GitHub" />
+                <img src="images/github.png" alt="GitHub Icon" loading="lazy" />
               </a>
             </li>
             <li>
@@ -69,9 +69,13 @@
                 href="https://www.linkedin.com/in/liammillerdev/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="LinkedIn Profile"
+                aria-label="Visit Liam Miller's LinkedIn Profile"
               >
-                <img src="images/linkedin.png" alt="LinkedIn" />
+                <img
+                  src="images/linkedin.png"
+                  alt="LinkedIn Icon"
+                  loading="lazy"
+                />
               </a>
             </li>
           </ul>
@@ -101,24 +105,64 @@
     <!-- Parallax Background -->
     <div class="parallax" aria-hidden="true">
       <div class="parallax__layer parallax__layer__1">
-        <img class="parallax__image" src="images/layer2.png" alt="" />
-        <img class="parallax__image" src="images/layer2.png" alt="" />
+        <img
+          class="parallax__image"
+          src="images/layer2.png"
+          alt="Parallax layer 1"
+        />
+        <img
+          class="parallax__image"
+          src="images/layer2.png"
+          alt="Parallax layer 1"
+        />
       </div>
       <div class="parallax__layer parallax__layer__2">
-        <img class="parallax__image" src="images/layer3.png" alt="" />
-        <img class="parallax__image" src="images/layer3.png" alt="" />
+        <img
+          class="parallax__image"
+          src="images/layer3.png"
+          alt="Parallax layer 2"
+        />
+        <img
+          class="parallax__image"
+          src="images/layer3.png"
+          alt="Parallax layer 2"
+        />
       </div>
       <div class="parallax__layer parallax__layer__3">
-        <img class="parallax__image" src="images/layer4.png" alt="" />
-        <img class="parallax__image" src="images/layer4.png" alt="" />
+        <img
+          class="parallax__image"
+          src="images/layer4.png"
+          alt="Parallax layer 3"
+        />
+        <img
+          class="parallax__image"
+          src="images/layer4.png"
+          alt="Parallax layer 3"
+        />
       </div>
       <div class="parallax__layer parallax__layer__4">
-        <img class="parallax__image" src="images/layer5.png" alt="" />
-        <img class="parallax__image" src="images/layer5.png" alt="" />
+        <img
+          class="parallax__image"
+          src="images/layer5.png"
+          alt="Parallax layer 4"
+        />
+        <img
+          class="parallax__image"
+          src="images/layer5.png"
+          alt="Parallax layer 4"
+        />
       </div>
       <div class="parallax__layer parallax__layer__5">
-        <img class="parallax__image" src="images/layer6.png" alt="" />
-        <img class="parallax__image" src="images/layer6.png" alt="" />
+        <img
+          class="parallax__image"
+          src="images/layer6.png"
+          alt="Parallax layer 5"
+        />
+        <img
+          class="parallax__image"
+          src="images/layer6.png"
+          alt="Parallax layer 5"
+        />
         <div class="parallax__cover"></div>
       </div>
     </div>
