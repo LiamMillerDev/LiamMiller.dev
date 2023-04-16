@@ -111,7 +111,7 @@ main {
   z-index: 1000;
 }
 .logo img {
-  width: 80px;
+  width: 25px;
   height: auto;
 }
 nav {
@@ -133,7 +133,7 @@ nav {
 }
 .nav-links a {
   color: #1a1a1a;
-  font-size: 24px;
+  font-size: 18px;
 }
 .nav-links a::before {
   content: "";
@@ -147,7 +147,8 @@ nav {
   transform: translateX(-50%);
   border-radius: 1px;
 }
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a:focus {
   color: #228b22;
 }
 .navbar.scrolled {
@@ -228,7 +229,7 @@ nav {
     transform: translateX(0);
   }
   .nav-links.active li {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
   }
   .nav-links.active li:first-child {
     margin-top: 0;
