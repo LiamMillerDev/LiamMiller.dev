@@ -20,9 +20,7 @@ main {
   display: flex;
   list-style: none;
 }
-.imgBx,
-.parallax__layer img:nth-child(2),
-.top-third {
+.parallax__layer img:nth-child(2) {
   left: 50%;
 }
 .nav-links a,
@@ -71,6 +69,7 @@ main {
   height: 190px;
   background: #c4dce9;
   box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+  margin: auto;
 }
 .content,
 .imgBx,
@@ -253,7 +252,6 @@ nav {
     flex-direction: row;
     position: fixed;
     bottom: 1rem;
-    right: 7rem;
     padding: 1rem;
   }
   .social-links.active li {
@@ -347,28 +345,4 @@ nav {
     transform: translateY(0%);
     opacity: 1;
   }
-}
-
-.layer-animation {
-  animation: slideUp 1s ease forwards;
-}
-
-.parallax__layer__1.layer-animation {
-  animation-delay: 0s;
-}
-
-.parallax__layer__2.layer-animation {
-  animation-delay: 0.1s;
-}
-
-.parallax__layer__3.layer-animation {
-  animation-delay: 0.2s;
-}
-
-.parallax__layer__4.layer-animation {
-  animation-delay: 0.3s;
-}
-
-.parallax__layer__5.layer-animation {
-  animation-delay: 0.4s;
 }
