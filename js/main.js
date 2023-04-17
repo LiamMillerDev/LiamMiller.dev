@@ -1,7 +1,6 @@
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
 const navbar = document.querySelector(".navbar");
-const parallax = document.querySelector(".parallax");
 
 document.addEventListener("DOMContentLoaded", function () {
   const socialLinks = document.querySelector(".social-links");
@@ -49,7 +48,6 @@ function handleResize(socialLinks) {
 
 function toggleNavbarBackground() {
   const windowHeight = window.innerHeight;
-  const scrollTop = parallax.scrollTop;
   navbar.style.backgroundColor = `rgba(255, 255, 255, ${Math.min(
     scrollTop / windowHeight,
     1
@@ -68,11 +66,56 @@ function updateHamburger() {
 }
 document.addEventListener("DOMContentLoaded", function () {
   AOS.init({
-    duration: 1000,
+    duration: 2000,
     easing: "ease",
     once: true,
   });
 });
+document.addEventListener("DOMContentLoaded", function () {
+  const rellaxLayer1 = new Rellax(".rellax-layer1", {
+    speed: -2,
+    center: false,
+    wrapper: null,
+    round: true,
+    vertical: true,
+    horizontal: false,
+  });
 
-parallax.addEventListener("scroll", toggleNavbarBackground);
+  const rellaxLayer2 = new Rellax(".rellax-layer2", {
+    speed: -1,
+    center: false,
+    wrapper: null,
+    round: true,
+    vertical: true,
+    horizontal: false,
+  });
+
+  const rellaxLayer3 = new Rellax(".rellax-layer3", {
+    speed: 0,
+    ccenter: false,
+    wrapper: null,
+    round: true,
+    vertical: true,
+    horizontal: false,
+  });
+
+  const rellaxLayer4 = new Rellax(".rellax-layer4", {
+    speed: 1,
+    center: false,
+    wrapper: null,
+    round: true,
+    vertical: true,
+    horizontal: false,
+  });
+
+  const rellaxLayer5 = new Rellax(".rellax-layer5", {
+    speed: 2,
+    center: false,
+    wrapper: null,
+    round: true,
+    vertical: true,
+    horizontal: false,
+  });
+});
+
 window.addEventListener("resize", updateHamburger);
