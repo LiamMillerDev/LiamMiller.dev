@@ -19,7 +19,6 @@
   display: flex;
   list-style: none;
 }
-
 .nav-links a,
 main {
   position: relative;
@@ -123,7 +122,7 @@ main {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: transparent;
+  background-color: #ffffff;
   z-index: 1000;
 }
 .logo img {
@@ -160,10 +159,6 @@ nav {
 .nav-links a:focus,
 .nav-links a:hover {
   color: #228b22;
-}
-.navbar.scrolled {
-  background-color: #fff;
-  transition: background-color 0.3s;
 }
 .social-links {
   align-items: baseline;
@@ -264,17 +259,13 @@ nav {
     display: none;
   }
 }
-
 /* Grid container */
 .grid-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 100vh 100vh;
-  grid-template-areas:
-    "main ."
-    "about about";
+  grid-template-areas: "main ." "about about";
 }
-
 /* About section */
 .about-container {
   position: absolute;
@@ -284,7 +275,6 @@ nav {
   justify-content: flex-end;
   align-items: center;
 }
-
 .about-card {
   max-width: 900px;
   width: 50%;
@@ -294,13 +284,11 @@ nav {
   box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
   z-index: 10;
 }
-
 .about-card h2 {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 20px;
 }
-
 .about-card p {
   font-size: 1.1rem;
   line-height: 1.6;
@@ -310,12 +298,10 @@ nav {
 .parallax-wrapper {
   display: flex;
   position: absolute;
-
   width: 100%;
   min-height: 100vh;
   z-index: -1;
 }
-
 .parallax-container {
   position: relative;
   width: 50%;
@@ -323,7 +309,6 @@ nav {
   bottom: 0;
   justify-content: flex-end;
 }
-
 .rellax-layer {
   position: absolute;
   width: 100%;
@@ -333,8 +318,17 @@ nav {
   background-repeat: no-repeat;
   background-position: bottom;
 }
-
 .rellax-layer img {
   width: 100%;
   height: auto;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
