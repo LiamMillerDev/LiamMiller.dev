@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const rellaxLayer3 = new Rellax(".rellax-layer3", {
     speed: 0,
-    ccenter: false,
+    center: false,
     wrapper: null,
     round: true,
     vertical: true,

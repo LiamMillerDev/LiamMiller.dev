@@ -250,6 +250,14 @@ nav {
   .social-links.active li:first-child {
     margin-left: 0;
   }
+  .parallax-container {
+    display: none;
+  }
+
+  .parallax-container:first-of-type {
+    display: block;
+    width: 100%;
+  }
 }
 @media (min-width: 769px) {
   .nav-links {
