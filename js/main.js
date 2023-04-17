@@ -1,19 +1,27 @@
+// Query DOM elements
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
 const navbar = document.querySelector(".navbar");
 
+// Initialize event listeners after the content is loaded
 document.addEventListener("DOMContentLoaded", function () {
   const socialLinks = document.querySelector(".social-links");
 
+  // Toggle menu when the hamburger is clicked
   hamburger.addEventListener("click", function () {
     toggleMenu(socialLinks);
   });
 
+  // Handle window resizing
   window.addEventListener("resize", function () {
     handleResize(socialLinks);
   });
+
+  // Adjust parallax position on initial load
+  adjustParallaxPosition();
 });
 
+// Toggle menu function
 function toggleMenu(socialLinks) {
   hamburger.classList.toggle("active");
 
@@ -36,6 +44,7 @@ function toggleMenu(socialLinks) {
   socialLinks.classList.toggle("active");
 }
 
+// Handle window resizing function
 function handleResize(socialLinks) {
   if (window.innerWidth >= 769) {
     navLinks.classList.remove("active");
@@ -46,6 +55,7 @@ function handleResize(socialLinks) {
   }
 }
 
+// Toggle navbar background function
 function toggleNavbarBackground() {
   const windowHeight = window.innerHeight;
   navbar.style.backgroundColor = `rgba(255, 255, 255, ${Math.min(
@@ -54,6 +64,19 @@ function toggleNavbarBackground() {
   )})`;
 }
 
+// Adjust parallax position function
+function adjustParallaxPosition() {
+  const parallaxContainer = document.querySelector(
+    ".parallax-container:first-of-type"
+  );
+  if (window.innerWidth <= 768) {
+    parallaxContainer.classList.add("mobile-parallax-container");
+  } else {
+    parallaxContainer.classList.remove("mobile-parallax-container");
+  }
+}
+
+// Update hamburger function
 function updateHamburger() {
   if (window.innerWidth <= 768) {
     navLinks.classList.contains("show")
@@ -64,6 +87,8 @@ function updateHamburger() {
     navLinks.classList.remove("show");
   }
 }
+
+// Initialize AOS (Animate On Scroll)
 document.addEventListener("DOMContentLoaded", function () {
   AOS.init({
     duration: 2000,
@@ -71,51 +96,29 @@ document.addEventListener("DOMContentLoaded", function () {
     once: true,
   });
 });
+
+// Initialize Rellax parallax library
 document.addEventListener("DOMContentLoaded", function () {
-  const rellaxLayer1 = new Rellax(".rellax-layer1", {
-    speed: -2,
-    center: false,
-    wrapper: null,
-    round: true,
-    vertical: true,
-    horizontal: false,
-  });
+  const rellaxOptions = [
+    { selector: ".rellax-layer1", speed: -2 },
+    { selector: ".rellax-layer2", speed: -1 },
+    { selector: ".rellax-layer3", speed: 0 },
+    { selector: ".rellax-layer4", speed: 1 },
+    { selector: ".rellax-layer5", speed: 2 },
+  ];
 
-  const rellaxLayer2 = new Rellax(".rellax-layer2", {
-    speed: -1,
-    center: false,
-    wrapper: null,
-    round: true,
-    vertical: true,
-    horizontal: false,
-  });
-
-  const rellaxLayer3 = new Rellax(".rellax-layer3", {
-    speed: 0,
-    center: false,
-    wrapper: null,
-    round: true,
-    vertical: true,
-    horizontal: false,
-  });
-
-  const rellaxLayer4 = new Rellax(".rellax-layer4", {
-    speed: 1,
-    center: false,
-    wrapper: null,
-    round: true,
-    vertical: true,
-    horizontal: false,
-  });
-
-  const rellaxLayer5 = new Rellax(".rellax-layer5", {
-    speed: 2,
-    center: false,
-    wrapper: null,
-    round: true,
-    vertical: true,
-    horizontal: false,
+  rellaxOptions.forEach((option) => {
+    new Rellax(option.selector, {
+      speed: option.speed,
+      center: false,
+      wrapper: null,
+      round: true,
+      vertical: true,
+      horizontal: false,
+    });
   });
 });
 
+// Add event listeners for window resize
 window.addEventListener("resize", updateHamburger);
+window.addEventListener("resize", adjustParallaxPosition);

@@ -258,6 +258,12 @@ nav {
     display: block;
     width: 100%;
   }
+  .mobile-parallax-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+  }
 }
 @media (min-width: 769px) {
   .nav-links {
