@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Handle window resizing
   window.addEventListener("resize", function () {
     handleResize(socialLinks);
+    positionBackgroundLayer();
   });
 
   // Adjust parallax position on initial load

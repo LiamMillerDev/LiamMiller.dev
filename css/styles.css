@@ -311,7 +311,7 @@ h1 {
 .about-container {
   position: absolute;
   width: 100%;
-  top: calc(100% + 190px);
+  top: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -360,7 +360,7 @@ h1 {
   position: absolute;
   width: 100%;
   height: auto;
-  bottom: 0;
+  bottom: -8px;
   display: inline-block;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -369,6 +369,32 @@ h1 {
 .rellax-layer img {
   width: 100%;
   height: auto;
+}
+.rellax-layer1 {
+  z-index: 1;
+}
+
+.rellax-layer2 {
+  z-index: 2;
+}
+
+.rellax-layer3 {
+  z-index: 3;
+}
+
+.rellax-layer4 {
+  z-index: 4;
+}
+
+.rellax-layer5 {
+  z-index: 5;
+}
+.background-layer {
+  background-color: #0b1405;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
 }
 
 .visually-hidden {
