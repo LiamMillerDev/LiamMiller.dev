@@ -358,20 +358,23 @@ h1 {
   z-index: 5;
 }
 
+/* About section styles */
 .background-layer {
   background-color: #0b1405;
   position: absolute;
   top: 0;
   width: 100%;
-  height: 100%;
+  height: 50%;
   z-index: -1;
-  background-position: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
 }
-
-/* About section styles */
 .about-container {
+  background-color: #0b1405;
   position: absolute;
   width: 100%;
+  height: 120%;
   top: 100%;
   display: flex;
   justify-content: flex-end;
