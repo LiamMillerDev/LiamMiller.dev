@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Handle window resizing
   window.addEventListener("resize", function () {
     handleResize(socialLinks);
-    positionBackgroundLayer();
+    adjustParallaxPosition();
   });
 
   // Adjust parallax position on initial load
@@ -106,6 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
     { selector: ".rellax-layer3", speed: 0 },
     { selector: ".rellax-layer4", speed: 1 },
     { selector: ".rellax-layer5", speed: 2 },
+    { selector: ".background-layer", speed: 3 },
   ];
 
   rellaxOptions.forEach((option) => {
