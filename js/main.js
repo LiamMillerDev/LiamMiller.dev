@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
     { selector: ".rellax-layer3", speed: 0 },
     { selector: ".rellax-layer4", speed: 1 },
     { selector: ".rellax-layer5", speed: 2 },
-    { selector: ".background-layer", speed: 3.5 },
+    { selector: ".background-layer", speed: 3 },
   ];
 
   rellaxOptions.forEach((option) => {
@@ -121,6 +121,25 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Initialize scroll event listener
+
+let lastScrollPosition = 0;
+function handleScroll() {
+  const currentScrollPosition = window.pageYOffset;
+  const isScrollingDown = currentScrollPosition > lastScrollPosition;
+
+  if (isScrollingDown) {
+    navbar.classList.add("hidden");
+  } else {
+    navbar.classList.remove("hidden");
+  }
+
+  lastScrollPosition = currentScrollPosition;
+  navbar.style.backgroundColor =
+    currentScrollPosition > 0 ? "#ffffff" : "transparent";
+}
+
 // Add event listeners for window resize
 window.addEventListener("resize", updateHamburger);
 window.addEventListener("resize", adjustParallaxPosition);
+window.addEventListener("scroll", handleScroll);
