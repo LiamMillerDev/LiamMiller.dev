@@ -139,6 +139,24 @@ function handleScroll() {
     currentScrollPosition > 0 ? "#ffffff" : "transparent";
 }
 
+// Smooth scroll for navigation links
+document.querySelectorAll(".nav-links a").forEach((link) => {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+    const target = document.getElementById(this.getAttribute("href").slice(1));
+
+    // Close the hamburger menu
+    hamburger.classList.remove("active");
+    navLinks.classList.remove("show");
+    navLinks.classList.remove("active");
+
+    // Scroll to the target section
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+  });
+});
+
 // Add event listeners for window resize
 window.addEventListener("resize", updateHamburger);
 window.addEventListener("resize", adjustParallaxPosition);
