@@ -92,9 +92,23 @@ function updateHamburger() {
 // Initialize AOS (Animate On Scroll)
 document.addEventListener("DOMContentLoaded", function () {
   AOS.init({
-    duration: 2000,
+    duration: 1000,
     easing: "ease",
     once: true,
+  });
+});
+
+// No sroll hamburger menu
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.querySelector(".hamburger");
+  const navLinks = document.querySelector(".nav-links");
+
+  hamburger.addEventListener("click", function () {
+    hamburger.classList.toggle("active");
+    navLinks.classList.toggle("show");
+
+    // Add or remove the "no-scroll" class to the body element
+    document.body.classList.toggle("no-scroll");
   });
 });
 

@@ -217,6 +217,11 @@ h1 {
   opacity: 0;
 }
 
+.no-scroll {
+  overflow: hidden;
+  height: 100%;
+}
+
 /* Media query styles */
 @media (max-width: 768px) {
   .navbar {
@@ -366,7 +371,7 @@ h1 {
 
 /* About section styles */
 .background-layer {
-  background-image: linear-gradient(#0b1405 20%, rgb(5, 45, 5));
+  background-color: white;
   position: absolute;
   top: 0;
   width: 100%;
@@ -379,16 +384,17 @@ h1 {
 .about-container {
   position: absolute;
   width: 100%;
-  height: 50%;
-  top: 99%;
+  height: 70%;
+  top: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
 
 .about-card {
   max-width: 900px;
-  width: 50%;
+  width: 100%;
   background: #c4dce9;
   padding: 40px;
   border-radius: 20px;
@@ -404,6 +410,78 @@ h1 {
 }
 
 .about-card p {
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #2f231b;
+}
+
+/* Projects section styles */
+.projects-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 199%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.projects-card {
+  max-width: 900px;
+  width: 100%;
+  background: #c4dce9;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  justify-content: center;
+}
+
+.projects-card h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.projects-card p {
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #2f231b;
+}
+
+/* Contact section styles */
+.contact-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 299%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.contact-card {
+  max-width: 900px;
+  width: 100%;
+  background: #c4dce9;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  justify-content: center;
+}
+
+.contact-card h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contact-card p {
   text-align: center;
   font-size: 1.1rem;
   line-height: 1.6;
