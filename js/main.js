@@ -31,7 +31,6 @@ function toggleMenu(socialLinks) {
 
     setTimeout(() => {
       navLinks.classList.remove("active");
-      document.querySelector(".navbar").appendChild(socialLinks);
     }, 300);
   } else {
     navLinks.classList.add("active");
@@ -43,6 +42,9 @@ function toggleMenu(socialLinks) {
   }
 
   socialLinks.classList.toggle("active");
+
+  // Add or remove the "no-scroll" class to the body element
+  document.body.classList.toggle("no-scroll");
 }
 
 // Handle window resizing function
@@ -98,20 +100,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// No sroll hamburger menu
-document.addEventListener("DOMContentLoaded", function () {
-  const hamburger = document.querySelector(".hamburger");
-  const navLinks = document.querySelector(".nav-links");
-
-  hamburger.addEventListener("click", function () {
-    hamburger.classList.toggle("active");
-    navLinks.classList.toggle("show");
-
-    // Add or remove the "no-scroll" class to the body element
-    document.body.classList.toggle("no-scroll");
-  });
-});
-
 // Initialize Rellax parallax library
 document.addEventListener("DOMContentLoaded", function () {
   const rellaxOptions = [
@@ -163,6 +151,9 @@ document.querySelectorAll(".nav-links a").forEach((link) => {
     hamburger.classList.remove("active");
     navLinks.classList.remove("show");
     navLinks.classList.remove("active");
+
+    // Remove the no-scroll class from the body element
+    document.body.classList.remove("no-scroll");
 
     // Scroll to the target section
     if (target) {
