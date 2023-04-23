@@ -6,6 +6,8 @@ const navbar = document.querySelector(".navbar");
 // Initialize event listeners after the content is loaded
 document.addEventListener("DOMContentLoaded", function () {
   const socialLinks = document.querySelector(".social-links");
+  navLinks.classList.toggle("large-links");
+  socialLinks.classList.toggle("large-links");
 
   // Toggle menu when the hamburger is clicked
   hamburger.addEventListener("click", function () {
@@ -108,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
     { selector: ".rellax-layer3", speed: 0 },
     { selector: ".rellax-layer4", speed: 1 },
     { selector: ".rellax-layer5", speed: 2 },
-    { selector: ".background-layer", speed: 3 },
+    { selector: ".background-layer", speed: 3.3 },
   ];
 
   rellaxOptions.forEach((option) => {
