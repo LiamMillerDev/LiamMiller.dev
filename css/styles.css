@@ -353,13 +353,14 @@ h1 {
 @media (min-width: 769px) {
 }
 
-/* Grid container styles */
+/* Grid container styles
 .grid-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 100vh 100vh;
   grid-template-areas: "main ." "about about";
 }
+*/
 
 /* Parallax styles */
 .parallax-wrapper {
@@ -412,23 +413,28 @@ h1 {
   z-index: 5;
 }
 
-/* About section styles */
+/* Content section styles */
 .background-layer {
   background-color: white;
   position: absolute;
-  top: 0;
+  top: calc(100vh);
   width: 100%;
-  height: 50%;
+  height: 100%;
   z-index: -1;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;
 }
+
+.sections-container {
+  position: relative;
+  width: 100%;
+}
+
+/* About section styles */
 .about-container {
-  position: absolute;
   width: 100%;
   height: 100%;
-  top: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -463,8 +469,8 @@ h1 {
 .projects-container {
   position: absolute;
   width: 100%;
-  height: 100%;
-  top: 200%;
+  min-height: 100vh;
+  top: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -499,8 +505,8 @@ h1 {
 .contact-container {
   position: absolute;
   width: 100%;
-  height: 100%;
-  top: 300%;
+  min-height: 100vh;
+  top: 200%;
   display: flex;
   justify-content: center;
   align-items: center;
