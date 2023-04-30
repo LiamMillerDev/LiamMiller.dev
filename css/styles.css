@@ -44,7 +44,6 @@ nav {
 
 /* Card styles */
 .card {
-  position: absolute;
   width: 350px;
   height: 190px;
   background: #c4dce9;
@@ -52,11 +51,18 @@ nav {
   margin: auto;
   border-radius: 20px;
   display: flex;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
   justify-content: center;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .content,
@@ -353,15 +359,6 @@ h1 {
 @media (min-width: 769px) {
 }
 
-/* Grid container styles
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 100vh 100vh;
-  grid-template-areas: "main ." "about about";
-}
-*/
-
 /* Parallax styles */
 .parallax-wrapper {
   display: flex;
@@ -429,6 +426,32 @@ h1 {
 .sections-container {
   position: relative;
   width: 100%;
+}
+
+/* Wave separator styles */
+.wave-separator {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  margin-bottom: 250px;
+}
+
+.wave-separator-upside-down {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  margin-top: 250px;
+}
+
+.wave-separator img,
+.wave-separator-upside-down img {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 200px;
 }
 
 /* About section styles */
