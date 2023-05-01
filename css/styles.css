@@ -434,7 +434,6 @@ h1 {
   width: 100%;
   overflow: hidden;
   line-height: 0;
-  margin-bottom: 250px;
 }
 
 .wave-separator-upside-down {
@@ -443,7 +442,6 @@ h1 {
   overflow: hidden;
   line-height: 0;
   transform: rotate(180deg);
-  margin-top: 250px;
 }
 
 .wave-separator img,
@@ -451,7 +449,15 @@ h1 {
   position: relative;
   display: block;
   width: calc(100% + 1.3px);
-  height: 200px;
+  height: 300px;
+}
+
+.wave-separator img,
+.wave-separator-upside-down img {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 300px;
 }
 
 /* About section styles */
