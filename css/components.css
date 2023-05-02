@@ -1,0 +1,163 @@
+/* Card styles */
+.card {
+  width: 350px;
+  height: 190px;
+  background: #c4dce9;
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+  margin: auto;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.content,
+.imgBx {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.imgBx {
+  position: absolute;
+  left: calc(50% - 75px);
+  top: -50px;
+  width: 150px;
+  height: 150px;
+  background-color: #2ecc71;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
+}
+
+.imgBx img {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.details {
+  text-align: center;
+  padding: 20px;
+  bottom: 0;
+}
+
+.details h2 {
+  font-size: 1.25em;
+  font-weight: 600;
+  color: #000;
+  line-height: 1.2em;
+}
+
+.details h2 span {
+  font-size: 0.75em;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+/* Resume button styles */
+.resume-pill {
+  display: inline-block;
+  padding: 5px 15px;
+  border: 2px solid #2ecc71;
+  border-radius: 25px;
+  margin-left: 10px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.resume-pill::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #2ecc71;
+  border-radius: 25px;
+  z-index: -1;
+  transition: width 0.4s ease;
+}
+
+.social-links .resume-pill {
+  color: black;
+}
+
+.social-links .resume-pill:hover,
+.social-links .resume-pill:focus {
+  color: #ffffff;
+}
+
+.resume-pill:hover::before,
+.resume-pill:focus::before {
+  width: 100%;
+}
+
+/* Wave separator styles */
+.wave-separator,
+.wave-separator-upside-down {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave-separator-upside-down {
+  transform: rotate(180deg);
+}
+
+.wave-separator img,
+.wave-separator-upside-down img {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 300px;
+}
+
+/* Content cards */
+.about-card,
+.projects-card,
+.contact-card {
+  max-width: 900px;
+  width: 100%;
+  background: #c4dce9;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  justify-content: center;
+}
+
+.about-card h2,
+.projects-card h2,
+.contact-card h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about-card p,
+.projects-card p,
+.contact-card p {
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #2f231b;
+}

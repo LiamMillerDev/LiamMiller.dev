@@ -1,0 +1,145 @@
+/* Navbar styles */
+.navbar {
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  z-index: 1000;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+nav {
+  flex-grow: 1;
+}
+
+.logo img {
+  width: 25px;
+  height: auto;
+}
+
+/* Navigation and Social links styles */
+.nav-links,
+.social-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links a,
+.social-links a {
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navbar h1 {
+  font-weight: 500;
+  font-family: Roboto, sans-serif;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.nav-links li {
+  margin-left: 1.5rem;
+}
+
+.nav-links a {
+  color: #1a1a1a;
+  font-size: 18px;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #228b22;
+  transform: scaleX(0);
+  bottom: 0;
+  left: 0;
+  transition: transform 0.4s ease;
+}
+
+.nav-links a:focus::after,
+.nav-links a:hover::after {
+  transform: scaleX(1);
+}
+
+.nav-links a:focus,
+.nav-links a:hover,
+.social-links a:focus,
+.social-links a:hover {
+  color: #228b22;
+}
+
+/* Social links styles */
+.social-links {
+  align-items: center;
+}
+
+.social-links a {
+  margin-left: 1rem;
+}
+
+.social-links img {
+  width: 24px;
+}
+
+.social-links a::after {
+  content: none;
+}
+
+/* Hamburger menu styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background-color: #203923;
+  transition: 0.3s;
+}
+
+.hamburger span:first-child,
+.hamburger span:nth-child(3) {
+  transition: transform 0.3s, top 0.3s, bottom 0.3s;
+}
+
+.hamburger span:nth-child(2) {
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.hamburger.active span:first-child {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100%;
+}

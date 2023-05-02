@@ -1,0 +1,94 @@
+/* Parallax styles */
+.parallax-wrapper {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  z-index: -1;
+}
+
+.parallax-container {
+  position: relative;
+  width: 50%;
+  min-height: 100vh;
+  bottom: 0;
+  justify-content: flex-end;
+}
+
+.rellax-layer {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  bottom: -8px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.rellax-layer img {
+  width: 100%;
+  height: auto;
+}
+
+.rellax-layer1 {
+  z-index: 1;
+}
+
+.rellax-layer2 {
+  z-index: 2;
+}
+
+.rellax-layer3 {
+  z-index: 3;
+}
+
+.rellax-layer4 {
+  z-index: 4;
+}
+
+.rellax-layer5 {
+  z-index: 5;
+}
+
+/* Content section styles */
+.background-layer {
+  background-color: white;
+  position: absolute;
+  top: calc(100vh);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+.sections-container {
+  position: relative;
+  width: 100%;
+}
+
+/* About, Projects, and Contact section styles */
+.about-container,
+.projects-container,
+.contact-container {
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.about-container {
+  top: 50%;
+}
+
+.projects-container {
+  top: 100%;
+}
+
+.contact-container {
+  top: 150%;
+}
