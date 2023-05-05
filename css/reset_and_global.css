@@ -1,13 +1,16 @@
-/* Normalize.css*/
+/* Import Normalize.css */
 @import "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css";
 
-/* Reset and global styles */
-* {
+/* Universal selector for common styles */
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Body styles */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -18,7 +21,7 @@ body {
   position: relative;
 }
 
-/* Default element styles */
+/* Anchor styles */
 a {
   text-decoration: none;
   color: inherit;
@@ -28,6 +31,7 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Headings styles */
 h1,
 h2,
 h3,
