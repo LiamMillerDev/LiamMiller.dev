@@ -70,29 +70,48 @@
   flex-direction: column;
 }
 
-/* About, Projects, and Contact section styles */
+/* About section styles */
 .about-container {
   background-color: #2ecc71;
   width: 100%;
   min-height: 50vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 20px;
 }
-.contact-container {
-  background-color: #2ecc71;
+
+.about-container h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.about-container p {
+  text-align: center;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: #ffffff;
+  max-width: 40%;
+}
+
+/* Projects and Contact section styles */
+.projects-container {
   width: 100%;
-  min-height: 40vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
 }
 
-.projects-container {
+.contact-container {
+  background-color: #2ecc71;
   width: 100%;
-  min-height: 100vh;
+  min-height: 40vh;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -96,9 +96,30 @@ html {
     width: 100%;
     z-index: -1;
   }
-  .about-card {
-    width: 90% !important;
-    margin: 0 auto;
-    padding: 30px !important;
+
+  .projects-card,
+  .contact-card {
+    padding: 30px;
+  }
+
+  .projects-card h2,
+  .contact-card h2 {
+    font-size: 2rem;
+  }
+
+  .projects-card p,
+  .contact-card p {
+    max-width: 100%;
+  }
+  .about-container {
+    padding: 30px;
+  }
+
+  .about-container h2 {
+    font-size: 2rem;
+  }
+
+  .about-container p {
+    max-width: 100%;
   }
 }
