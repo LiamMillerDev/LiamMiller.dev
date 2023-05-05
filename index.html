@@ -77,7 +77,7 @@
       </div>
       <div class="menu-container">
         <nav aria-labelledby="main-navigation">
-          <!-- Added an element with the referenced ID -->
+          <!-- Added an element with a matching ID -->
           <h2 class="visually-hidden" id="main-navigation">Main Navigation</h2>
           <div class="menu-container">
             <ul class="nav-links" role="menu">
@@ -85,7 +85,7 @@
               <li role="none">
                 <a href="#projects" role="menuitem">Projects</a>
               </li>
-              <li role="none">
+              <li role="none\">
                 <a href="#contact" role="menuitem">Contact</a>
               </li>
             </ul>
@@ -190,13 +190,9 @@
       </div>
       <!-- Content Section -->
       <div class="sections-container rellax-layer background-layer">
-        <div class="wave-separator">
-          <img src="images/wave.svg" alt="Wave separator" />
-        </div>
-
         <!-- About Section -->
         <div class="about-container" id="about">
-          <div class="about-card" data-aos="fade-right">
+          <div class="about-card">
             <h2>Hi, I'm Liam Miller.</h2>
             <p>
               A budding front-end developer hailing from New Zealand. With a
@@ -212,18 +208,25 @@
             </p>
           </div>
         </div>
+        <div class="wave-separator">
+          <img src="images/wave.svg" alt="Wave separator" />
+        </div>
 
         <!-- Projects section -->
         <div class="projects-container" id="projects">
-          <div class="projects-card" data-aos="fade-right">
+          <div class="projects-card">
             <h2>Projects</h2>
-            <p>No projects to display yet.</p>
+            <p>No projects currently on displays</p>
           </div>
+        </div>
+
+        <div class="wave-separator-upside-down">
+          <img src="images/wave.svg" alt="Wave separator" />
         </div>
 
         <!-- Contact section -->
         <div class="contact-container" id="contact">
-          <div class="contact-card" data-aos="fade-right">
+          <div class="contact-card">
             <h2>Contact</h2>
             <p>
               Let's get in touch! <br />
