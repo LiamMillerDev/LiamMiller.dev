@@ -21,16 +21,6 @@ body {
   position: relative;
 }
 
-/* Anchor styles */
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
 /* Headings styles */
 h1,
 h2,

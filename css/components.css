@@ -132,15 +132,14 @@
   height: 300px;
 }
 
-/* Content cards */
-.projects-card,
-.contact-card {
-  max-width: 900px;
+/* Project card */
+.projects-card {
+  max-width: 30%;
   width: 100%;
-  background: white;
+  background: #c4dce9;
   padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border-radius: 60px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
   z-index: 10;
   display: flex;
   flex-direction: column;
@@ -148,7 +147,28 @@
   margin-bottom: 30px;
 }
 
-.projects-card h2,
+.projects-card h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #3c3c3c;
+}
+
+/* Contact card */
+.contact-card {
+  max-width: 900px;
+  width: 100%;
+  background: white;
+  padding: 40px;
+  border-radius: 60px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
 .contact-card h2 {
   text-align: center;
   font-size: 2.5rem;
@@ -157,11 +177,47 @@
   color: #3c3c3c;
 }
 
-.projects-card p,
 .contact-card p {
   text-align: center;
   font-size: 1.1rem;
   line-height: 1.6;
   color: #2f231b;
   max-width: 80%;
+}
+
+/* Email Me button */
+.email-button {
+  display: inline-block;
+  padding: 10px 25px; /* Increase padding for a larger button */
+  font-size: 1.2rem; /* Increase font size */
+  border: 2px solid #3498db;
+  border-radius: 30px; /* Increase border radius for a smoother curve */
+  margin-left: 10px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  color: black;
+}
+
+.email-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #3498db;
+  border-radius: 30px; /* Increase border radius for a smoother curve */
+  z-index: -1;
+  transition: width 0.4s ease;
+}
+
+.email-button:hover,
+.email-button:focus {
+  color: #ffffff;
+}
+
+.email-button:hover::before,
+.email-button:focus::before {
+  width: 100%;
 }
