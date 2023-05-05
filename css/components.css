@@ -134,7 +134,7 @@
 
 /* Project card */
 .projects-card {
-  max-width: 30%;
+  max-width: 600px;
   width: 100%;
   background: #c4dce9;
   padding: 40px;
@@ -156,7 +156,7 @@
 
 /* Contact card */
 .contact-card {
-  max-width: 900px;
+  max-width: 600px;
   width: 100%;
   background: white;
   padding: 40px;
