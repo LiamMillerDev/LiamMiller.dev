@@ -219,7 +219,7 @@
   display: block;
   max-width: 50%;
   margin: 0 auto;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .project-description {
@@ -227,7 +227,7 @@
   font-size: 1.1rem;
   line-height: 1.6;
   color: #2f231b;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .tech-used {
