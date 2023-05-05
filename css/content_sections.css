@@ -100,12 +100,20 @@
 
 /* Projects and Contact section styles */
 .projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 20px;
+}
+
+.project-items-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
 }
 
 .contact-container {
