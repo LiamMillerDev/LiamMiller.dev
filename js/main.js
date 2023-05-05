@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
     { selector: ".rellax-layer3", speed: 0 },
     { selector: ".rellax-layer4", speed: 1 },
     { selector: ".rellax-layer5", speed: 2 },
-    { selector: ".background-layer", speed: 3.5 },
+    { selector: ".background-layer", speed: 6 },
   ];
 
   rellaxOptions.forEach((option) => {
