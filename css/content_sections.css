@@ -49,7 +49,6 @@
 .rellax-layer5 {
   z-index: 5;
 }
-
 /* Content section styles */
 .background-layer {
   background-color: white;
@@ -67,29 +66,35 @@
 .sections-container {
   position: relative;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 /* About, Projects, and Contact section styles */
-.about-container,
-.projects-container,
-.contact-container {
-  position: absolute;
+.about-container {
+  background-color: #2ecc71;
   width: 100%;
-  min-height: 100vh;
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.contact-container {
+  background-color: #2ecc71;
+  width: 100%;
+  min-height: 40vh;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
 }
 
-.about-container {
-  top: 50%;
-}
-
 .projects-container {
-  top: 100%;
-}
-
-.contact-container {
-  top: 150%;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
