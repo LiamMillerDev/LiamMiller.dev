@@ -137,7 +137,6 @@
 .contact-card {
   max-width: 600px;
   width: 100%;
-
   padding: 40px;
   border-radius: 60px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
@@ -220,6 +219,7 @@
   max-width: 50%;
   margin: 0 auto;
   margin-bottom: 20px;
+  z-index: 50;
 }
 
 .project-description {
@@ -231,6 +231,7 @@
 }
 
 .tech-used {
+  margin-top: auto;
   text-align: center;
   font-size: 0.9rem;
   color: #777;
