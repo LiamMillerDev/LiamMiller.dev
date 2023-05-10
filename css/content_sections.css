@@ -23,6 +23,7 @@
   display: inline-block;
   background-repeat: no-repeat;
   background-position: bottom;
+  z-index: -2;
 }
 
 .rellax-layer img {
@@ -68,6 +69,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  z-index: 1;
 }
 
 /* About section styles */
