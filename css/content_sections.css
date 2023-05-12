@@ -32,23 +32,23 @@
 }
 
 .rellax-layer1 {
-  z-index: 1;
+  z-index: -6;
 }
 
 .rellax-layer2 {
-  z-index: 2;
+  z-index: -5;
 }
 
 .rellax-layer3 {
-  z-index: 3;
+  z-index: -4;
 }
 
 .rellax-layer4 {
-  z-index: 4;
+  z-index: -3;
 }
 
 .rellax-layer5 {
-  z-index: 5;
+  z-index: -2;
 }
 /* Content section styles */
 .background-layer {
@@ -108,6 +108,7 @@
   width: 100%;
   min-height: 100vh;
   padding: 20px;
+  z-index: 1;
 }
 
 .project-items-row {

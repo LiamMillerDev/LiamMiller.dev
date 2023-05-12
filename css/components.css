@@ -219,7 +219,7 @@
   max-width: 50%;
   margin: 0 auto;
   margin-bottom: 20px;
-  z-index: 50;
+  z-index: 1;
 }
 
 .project-description {
