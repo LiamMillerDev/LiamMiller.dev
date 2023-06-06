@@ -59,14 +59,14 @@
   bottom: 0;
 }
 
-.details h2 {
+.details h1 {
   font-size: 1.25em;
   font-weight: 600;
   color: #000;
   line-height: 1.2em;
 }
 
-.details h2 span {
+.details h1 span {
   font-size: 0.75em;
   font-weight: 500;
   opacity: 0.9;
