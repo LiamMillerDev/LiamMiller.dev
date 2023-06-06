@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^liammiller.dev [NC]
+RewriteRule ^(.*)$ http://www.liammiller.dev/$1 [L,R=301]
